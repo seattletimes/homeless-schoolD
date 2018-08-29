@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat aliquam lectus vitae porttitor. Donec euismod sem dui, ac gravida sem mattis sed. Fusce porttitor accumsan sem elementum convallis. Nam id augue lobortis, laoreet magna non,
+          sodales risus. </p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=7>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+     return value >= 100 ? '#d73027' :
+        value >= 50 ? '#fdae61' :
+        value >= 0.0001 ? '#fee090' :
+        value >= 0.00 ? '#E5E5E5' :
+        value <= 0.0001 ? '#abd9e9' :
+        value <= -50.0 ? '#74add1' :
+             
+             '#4575b4' ;
+        </div>
+        <aside class="legend">
+          <h1>Change in homeless-student enrollment since 2012-13</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #d73027"></span> Over 100% increase</li>
+            <li>
+              <span class="block" style="background-color: #fdae61"></span> 50 - 99%</li>
+            <li>
+              <span class="block" style="background-color: #fee090"></span> 0 - 49%</li>
+            <li>
+              <span class="block" style="background-color: #abd9e9"></span> -49 - 0%</li>
+            <li>
+              <span class="block" style="background-color: #74add1"></span> -99 - -50%</li>
+            <li>
+              <span class="block" style="background-color: #4575b4"></span> -100% or more decrease</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Source: Name of source
+        <span class="credit">XXX XXX / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
