@@ -1,12 +1,12 @@
 {
   "s3": {
     "stage": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "rude-quartz"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/local/homeless-school-districts"
     }
   },
   "title": "",

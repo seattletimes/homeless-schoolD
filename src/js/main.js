@@ -24,14 +24,17 @@ if (mapElement) {
 
   var focused = false;
 
-  var all = "changeHome";
+  var all = "changeHomeless";
 
   var commafy = s => (s*1).toLocaleString().replace(/\.0+$/, "");
 
    data.features.forEach(function(f) {
-	["changeHome", "changeAll"].forEach(function(prop) {
-		f.properties[prop] = (f.properties[prop] * 100).toFixed(1);
+	["changeHomeless", "changeAll"].forEach(function(prop) {
+		f.properties[prop] = (f.properties[prop] * 100).toFixed(0);
 	});
+  ["bedYouth", "bedFamily"].forEach(function(prop) {
+    f.properties[prop] = commafy(f.properties[prop]);
+  });
 	});
 
 var onEachFeature = function(feature, layer) {
@@ -57,11 +60,11 @@ var getColor = function(d) {
     if (typeof value != "undefined") {
       // condition ? if-true : if-false;
      return value >= 100 ? '#d73027' :
-     		value >= 50 ? '#fdae61' :
+        value >= 50 ? '#fdae61' :
         value >= 0.0001 ? '#fee090' :
         value >= 0.00 ? '#E5E5E5' :
-        value <= 0.0001 ? '#abd9e9' :
-        value <= -50.0 ? '#74add1' :
+        value >= -49 ? '#abd9e9' :
+        value >= -99.0 ? '#74add1' :
              
              '#4575b4' ;
     } else {
@@ -87,8 +90,11 @@ var getColor = function(d) {
 
 }
 
-var onEachFeature = function(feature, layer) {
-  layer.bindPopup(ich.popup(feature.properties))
-};
+map.createPane("top");
+map.getPane("top").style.zIndex = 999;
+var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+  pane: "top",
+}).addTo(map);
 
  map.scrollWheelZoom.disable();
+

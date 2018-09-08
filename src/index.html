@@ -18,9 +18,8 @@
   <responsive-child class="map-container">
     <div class="outmost">
       <section class="chatter">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat aliquam lectus vitae porttitor. Donec euismod sem dui, ac gravida sem mattis sed. Fusce porttitor accumsan sem elementum convallis. Nam id augue lobortis, laoreet magna non,
-          sodales risus. </p>
+        <h1>Student homelessness rises in rural areas</h1>
+        <p>The number of homeless students in Washington has climbed nearly 34 percent over the past five years, even in rural districts, where there’s often little help for youth and families without a roof. Click on a district to see how numbers have changed, and how many shelter beds there are for youth and families.</p>
       </section>
 
       <div class="aspect-ratio-outer">
@@ -29,37 +28,32 @@
           <leaflet-map zoom=7>
             <tile-layer layer="cartoPositron"></tile-layer>
           </leaflet-map>
-     return value >= 100 ? '#d73027' :
-        value >= 50 ? '#fdae61' :
-        value >= 0.0001 ? '#fee090' :
-        value >= 0.00 ? '#E5E5E5' :
-        value <= 0.0001 ? '#abd9e9' :
-        value <= -50.0 ? '#74add1' :
-             
-             '#4575b4' ;
+
         </div>
         <aside class="legend">
-          <h1>Change in homeless-student enrollment since 2012-13</h1>
+          <h1>Change in homeless-student enrollment from 2012-13 to 2016-17</h1>
           <ul class="scale">
             <li>
               <span class="block" style="background-color: #d73027"></span> Over 100% increase</li>
             <li>
-              <span class="block" style="background-color: #fdae61"></span> 50 - 99%</li>
+              <span class="block" style="background-color: #fdae61"></span> 50 to 99%</li>
             <li>
-              <span class="block" style="background-color: #fee090"></span> 0 - 49%</li>
+              <span class="block" style="background-color: #fee090"></span> 1 to 49%</li>
             <li>
-              <span class="block" style="background-color: #abd9e9"></span> -49 - 0%</li>
+              <span class="block" style="background-color: #E5E5E5"></span> 0%</li>
             <li>
-              <span class="block" style="background-color: #74add1"></span> -99 - -50%</li>
+              <span class="block" style="background-color: #abd9e9"></span> -49 to -1%</li>
             <li>
-              <span class="block" style="background-color: #4575b4"></span> -100% or more decrease</li>
+              <span class="block" style="background-color: #74add1"></span> -99 to -50%</li>
+            <li>
+              <span class="block" style="background-color: #4575b4"></span> -100% decrease</li>
           </ul>
         </aside>
       </div>
 
 
-      <div class="source">Source: Name of source
-        <span class="credit">XXX XXX / THE SEATTLE TIMES</div>
+      <div class="source">Note: School districts with 10 or fewer homeless students or with only one year of data were reported as a zero percent change.<br>Sources: Seattle Times analysis, Office of Superintendent of Public Instruction, Washington State Department of Commerce (Shelter beds reported to the state as of January 2018)
+        <span class="credit">Emily M. Eng / THE SEATTLE TIMES</div>
     </div>
   </responsive-child>
 
